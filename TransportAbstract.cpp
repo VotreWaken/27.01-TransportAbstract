@@ -17,7 +17,7 @@ public:
     // Pure Virtual SetCost Method
     virtual void SetCost() = 0;
 
-    // Pure Virtual LoadÑapacity Method
+    // Pure Virtual Loadï¿½apacity Method
     virtual float LoadCapacity() = 0;
 
     // Pure Virtual PassengerPlaces Method
@@ -357,7 +357,7 @@ public:
         std::cout << "Capacity Cargo: " << capacityCargo_ << "\n";
         std::cout << "Passenger Places_: " << passengerPlaces_ << "\n\n";
     }
-        
+
     // Destructor
     virtual ~Vehicle() { std::cout << "~Vehicle() is executed\n"; }
 
@@ -439,6 +439,8 @@ int main()
         }
         case 6:
         {
+            for (int i = 0; i < 5; i++)
+                delete b[i];
             return 0;
         }
         default:
@@ -448,7 +450,4 @@ int main()
         }
         }
     }
-
-    for (int i = 0; i < 1; i++)
-        delete b[i];
 }
